@@ -1,0 +1,191 @@
+$contactWidth:300px;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+// #app {
+//   max-width: 1280px;
+//   margin: 0 auto;
+//   padding: 2rem;
+//   text-align: center;
+// }
+#main{
+  display: flex;
+  .navbar{
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 100vh;
+  }
+  .content {
+    flex-grow: 1;
+    color: #1a1a1a;
+    padding: 20px;
+    /* Add any other styling for the main content area */
+  }
+}
+.chat{
+  display: flex;
+  .list{
+    width: $contactWidth;
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 100vh;
+  }
+  .chatContent {
+    flex-grow: 1;
+    color: #1a1a1a;
+    padding: 20px;
+    position: relative;
+    height: 80vh;
+    .chatBody {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      .outgoing{
+        background-color: #E6FAF0;
+        border-radius: 16px;
+        padding: 8px 13px;
+        float: right;
+        width: 450px;
+        display: block;
+      }
+      .incoming{
+        width: 450px;
+        background-color: #F8F8F8;
+        border-radius: 16px;
+        padding: 8px 13px;
+        display: block;
+        float: left;
+      }
+    }
+    .chatFooter{
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .avatar{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+  }
+}
+.text-muted{
+  color: #7C8A95;
+}
+.contactCard{
+  margin: 10px 0;
+  padding:10px;
+  background: #F8F8F8;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.d-flex{
+  display: flex;
+}
+.f-right{
+  float: right;
+}
+.f-left{
+  float: left;
+}
+@for $i from 12 through 42 {
+  .fs#{$i}{
+    font-size: $i+px; 
+  }
+}
+@for $i from 2 through 20 {
+  .mr#{$i}{
+    margin-right: $i+px; 
+  }
+}
+@for $i from 2 through 20 {
+  .ml#{$i}{
+    margin-left: $i+px; 
+  }
+}
+@for $i from 2 through 20 {
+  .mt#{$i}{
+    margin-top: $i+px; 
+  }
+}
+@for $i from 2 through 20 {
+  .mb#{$i}{
+    margin-bottom: $i+px; 
+  }
+}
+.searchInput{
+  border: 2px solid #EEEEEE;
+  border-radius: 10px;
+  width: -webkit-fill-available;
+  height: 20px;
+  padding: 12px 14px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
