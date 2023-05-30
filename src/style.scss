@@ -1,4 +1,4 @@
-$contactWidth:300px;
+$contactWidth: 300px;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -17,6 +17,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -45,9 +46,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -63,14 +66,16 @@ button:focus-visible {
 //   padding: 2rem;
 //   text-align: center;
 // }
-#main{
+#main {
   display: flex;
-  .navbar{
+
+  .navbar {
     width: 200px;
     background-color: #f0f0f0;
     padding: 20px;
     height: 100vh;
   }
+
   .content {
     flex-grow: 1;
     color: #1a1a1a;
@@ -78,113 +83,157 @@ button:focus-visible {
     /* Add any other styling for the main content area */
   }
 }
-.chat{
+
+.chat {
   display: flex;
-  .list{
+
+  .list {
     width: $contactWidth;
-    background-color: #f0f0f0;
     padding: 20px;
-    height: 100vh;
+    // height: 100vh;
   }
+
   .chatContent {
     flex-grow: 1;
     color: #1a1a1a;
     padding: 20px;
     position: relative;
-    height: 80vh;
-    .chatBody {
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      .outgoing{
-        background-color: #E6FAF0;
-        border-radius: 16px;
-        padding: 8px 13px;
-        float: right;
-        width: 450px;
-        display: block;
-      }
-      .incoming{
-        width: 450px;
-        background-color: #F8F8F8;
-        border-radius: 16px;
-        padding: 8px 13px;
-        display: block;
-        float: left;
-      }
-    }
-    .chatFooter{
+    height: 85vh;
+    width: 800px;
+    .chat-body {
+      background-color: #fff;
+      width: 100%;
+      border-right: 5px solid #e4e5e7;
       position: absolute;
       bottom: 0;
+      .chat-messages {
+        padding: 20px 26px;
+        overflow: auto;
+        margin-right: -5px;
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+      }  
+      .chat-message {
+        margin: 10px 0;
+        align-self: flex-start;
+        padding: 15px 20px;
+        background: #f2f4f6;
+        border-radius: 8px 8px 8px 0;
+        max-width: 780px;
+        position: relative;
+        word-break: break-word;
+      }  
+      .my-chat-message {
+        align-self: flex-end;
+        border-radius: 8px 8px 0 8px;
+        background-color: #E6FAF0;
+      }
+    }
+    .chatFooter {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
   }
-  .avatar{
-    width:70px;
-    height:70px;
+
+  .avatar {
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
   }
 }
-.text-muted{
+
+.text-muted {
   color: #7C8A95;
 }
-.contactCard{
+
+.contactCard {
   margin: 10px 0;
-  padding:10px;
+  padding: 10px;
   background: #F8F8F8;
   border-radius: 10px;
   cursor: pointer;
 }
-.d-flex{
+.messageInput{
+  width: 85%;
+  border: 2px solid #EEEEEE;
+  border-radius: 10px;
+  padding: 14px 62px 14px 23px;
+}
+
+.d-flex {
   display: flex;
 }
-.f-right{
+
+.f-right {
   float: right;
 }
-.f-left{
+
+.f-left {
   float: left;
 }
+
 @for $i from 12 through 42 {
-  .fs#{$i}{
-    font-size: $i+px; 
+  .fs#{$i} {
+    font-size: $i+px;
   }
 }
+
 @for $i from 2 through 20 {
-  .mr#{$i}{
-    margin-right: $i+px; 
+  .mr#{$i} {
+    margin-right: $i+px;
   }
 }
+
 @for $i from 2 through 20 {
-  .ml#{$i}{
-    margin-left: $i+px; 
+  .ml#{$i} {
+    margin-left: $i+px;
   }
 }
+
 @for $i from 2 through 20 {
-  .mt#{$i}{
-    margin-top: $i+px; 
+  .mt#{$i} {
+    margin-top: $i+px;
   }
 }
+
 @for $i from 2 through 20 {
-  .mb#{$i}{
-    margin-bottom: $i+px; 
+  .mb#{$i} {
+    margin-bottom: $i+px;
   }
 }
-.searchInput{
+
+.searchInput {
   border: 2px solid #EEEEEE;
   border-radius: 10px;
   width: -webkit-fill-available;
   height: 20px;
   padding: 12px 14px;
+  position: relative;
 }
-
+.sendBtn{
+  background-color: #00CD69;
+  border: 5%;
+  padding: 7px 7px 2px;
+  position: absolute;
+  right: 44px;
+  top: 5px;
+  img{
+    width: 20px;
+  }
+}
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

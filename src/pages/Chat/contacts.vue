@@ -20,18 +20,15 @@
 <script lang="ts">
 import {  defineComponent, reactive, toRefs, } from 'vue'
 import contacts from "@/assets/data/contacts"
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'Contacts',
-  props: {
-  },
   setup: () => {
     const contactsList = contacts
-    const router:any = useRouter()
-    const route:any = useRoute()
+    const router = useRouter()
     const state = reactive({
-      openChat(id){
+      openChat(id:number){
         router.push({name: 'Chat', params: {id} });
       }
     })
