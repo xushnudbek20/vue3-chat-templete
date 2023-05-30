@@ -67,11 +67,8 @@ button:focus-visible {
 //   text-align: center;
 // }
 #main {
-  display: flex;
-
   .navbar {
-    width: 200px;
-    background-color: #f0f0f0;
+    width: 232px;
     padding: 20px;
     height: 100vh;
   }
@@ -79,9 +76,18 @@ button:focus-visible {
   .content {
     flex-grow: 1;
     color: #1a1a1a;
-    padding: 20px;
+    // padding: 20px;
     /* Add any other styling for the main content area */
   }
+}
+.header{
+  padding: 28px 32px;
+}
+.d-flex{
+  display: flex;
+}
+.text-center{
+  text-align: center;
 }
 
 .chat {
@@ -100,6 +106,10 @@ button:focus-visible {
     position: relative;
     height: 85vh;
     width: 800px;
+    .chatHeader{
+      background-color: #F8F8F8;
+      padding: 9px;
+    }
     .chat-body {
       background-color: #fff;
       width: 100%;
@@ -143,7 +153,12 @@ button:focus-visible {
     border-radius: 50%;
   }
 }
-
+.navAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 20px rgba(1, 29, 50, 0.5));
+}
 .text-muted {
   color: #7C8A95;
 }
@@ -169,7 +184,13 @@ button:focus-visible {
 .f-right {
   float: right;
 }
-
+.menuItem{
+  display: block;
+  margin-top: 30px;
+  span{
+    vertical-align: super;
+  }
+}
 .f-left {
   float: left;
 }
